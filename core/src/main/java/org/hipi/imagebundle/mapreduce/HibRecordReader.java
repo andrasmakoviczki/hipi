@@ -36,7 +36,8 @@ public class HibRecordReader extends RecordReader<HipiImageHeader, HipiImage> {
 
     HipiImageFactory imageFactory = null;
     try {
-      imageFactory = new HipiImageFactory(context.getMapperClass());
+      //imageFactory = new HipiImageFactory(context.getMapperClass());
+      imageFactory = new HipiImageFactory(HipiImage.HipiImageType.BYTE);
     } catch (Exception ex) {
       System.err.println(ex.getMessage());
       ex.printStackTrace();
